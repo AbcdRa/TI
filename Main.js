@@ -69,8 +69,8 @@ function bin2dec(code) {
     let result = ""
     let dec = 0
     for (let i=0; i<code.length; i++) {
-        result += `${code[i]}*2^${i}+`
-        dec += code[i]*Math.pow(2,i)
+        result += `${code[i]}*2^${code.length-1-i}+`
+        dec += code[i]*Math.pow(2,code.length-1-i)
     }
     result = result.substr(0, result.length-1)
     result += ` = ${dec}`
