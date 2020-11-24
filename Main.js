@@ -42,7 +42,6 @@ function main() {
     //Упрощаем дробь если это возможно
     prob1.easy()
     let target = bin2frac(code)  
-    target.easy()
     let prob0 = new Frac(1,1).minus(prob1)
     draw(prob0, target)
     let hlp = []
@@ -64,9 +63,11 @@ function bin2frac(code) {
     result += `Число разрядов равно ${code.length}, значит знаментаель равен 2^${code.length+1} = ${denum} <br>`
     const [explain, num] = bin2dec(code)
     result += `Определим числитель для этого просто переведем ${code} в десятичное число ${explain} <br>`
-    result += `Получаем дробь ${num}/${denum}`
+    let target = new Frac(num, denum)
+    target.easy()
+    result += `Получаем дробь ${target.toStr()}`
     out.innerHTML = result
-    return new Frac(num, denum)
+    return target
 }
 
 
