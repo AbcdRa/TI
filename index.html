@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI</title>
+
+    <style>
+    div {
+        margin : 10px
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div>Введите вероятность единицы:</div><input id="num" type="text" value="4"/> / <input id="denum" type="text" value="10"/>
+    <div>Введите код:</div><input id="code" type="text" value="101010"/>
+    <div>Кол-во символов раскодированного сообщения</div><input id="length" type="text" value="5"/>
+    <div><button onclick="main()">Погнали</button></div>
+    <div id="out"></div>
+    <canvas id="canvas" width="1800"></canvas>
+    <div id="result"></div>
+    <script src="Frac.js"></script>
+    <script src="Main.js"></script>
+</body>
+</html>
