@@ -58,9 +58,9 @@ function main() {
 
 function bin2frac(code) {
     let result = `Преобразуем двоичное представление 0.${code} в дробь.`
-    result += `Определим знаменатель дроби, он равен 2^(число разрядов+1).`
-    const denum = Math.pow(2,code.length+1)
-    result += `Число разрядов равно ${code.length}, значит знаментаель равен 2^${code.length+1} = ${denum} <br>`
+    result += `Определим знаменатель дроби, он равен 2^(число разрядов).`
+    const denum = Math.pow(2,code.length)
+    result += `Число разрядов равно ${code.length}, значит знаментаель равен 2^${code.length} = ${denum} <br>`
     const [explain, num] = bin2dec(code)
     result += `Определим числитель для этого просто переведем ${code} в десятичное число ${explain} <br>`
     let target = new Frac(num, denum)
