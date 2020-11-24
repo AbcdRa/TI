@@ -29,6 +29,10 @@ function main() {
     out = document.getElementById("out")
     afterOut = document.getElementById("result")
 
+    out.innerHTML = ""
+    afterOut.innerHTML = ""
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     let parseOut = parse()
     if(!parseOut) {
         return 0
