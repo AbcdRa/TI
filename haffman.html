@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://unpkg.com/vis-data@latest/peer/umd/vis-data.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network@latest/peer/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network/styles/vis-network.min.css" />
+    <script src="Leaf.js"></script>
+    <script src="util.js"></script>
+    <script src="haffman.js"></script>
+    <title>Кодирование Хаффмана</title>
+</head>
+<body>
+    <p>Fast Entering</p>
+    <input type="text" id="fastCh" value="П К А М Н Т О С Ш">
+    <input type="text" id="fastPr" value="0,12 0,17 0,3 0,15 0,11 0,005 0,03 0,1 0,015">
+    <p>Декодируемое сообщение</p>
+    <input type="text" id="code" value="100010000000100000101">
+    <button onclick="haffman_prestart()">Кодирование Хаффмана</button>
+    <div id="mynetwork"></div>
+    <br>
+    <div id="out"></div>
+</body>
+</html>
